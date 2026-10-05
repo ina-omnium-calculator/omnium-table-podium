@@ -1,17 +1,14 @@
-<!doctype html><html lang='id'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>INA Omnium Calculator</title><style>
+<!doctype html><html lang='id'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>WTRACK RACE CALCULATOR</title><style>
 :root{font-family:system-ui,-apple-system,Segoe UI,sans-serif;color:#eef3f8;background:#08131f}body{margin:0;background:#08131f}.wrap{max-width:1200px;margin:auto;padding:18px}.top{display:flex;justify-content:space-between;gap:12px;align-items:center}.badge{font-weight:800;letter-spacing:.08em;color:#ff3b30}h1{margin:3px 0;font-size:clamp(24px,5vw,42px)}.sub{color:#9fb0c3}.tabs,.actions{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0}button,input{font:inherit}button{border:0;border-radius:10px;padding:10px 14px;font-weight:700;cursor:pointer;background:#1b2c3f;color:#fff}.primary{background:#e52521}.good{background:#087f5b}.warn{background:#9c6b00}.tab.active{background:#fff;color:#08131f}.card{background:#102033;border:1px solid #20364e;border-radius:14px;padding:14px;margin:12px 0;overflow:auto}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px}input{width:100%;box-sizing:border-box;border-radius:9px;border:1px solid #38516d;background:#091726;color:#fff;padding:10px}table{border-collapse:collapse;width:100%;min-width:760px}th,td{padding:9px;border-bottom:1px solid #243b54;text-align:center}th{color:#9fb0c3;position:sticky;top:0;background:#102033}.rider{text-align:left;font-weight:700}.pts{font-size:18px;font-weight:900}.mini{padding:6px 9px;margin:2px}.hidden{display:none}.rank1{background:#283319}.footer{color:#7f91a5;font-size:12px;margin-top:16px}.scorebox{display:flex;gap:5px;flex-wrap:wrap;justify-content:center}.danger{background:#7b2630}.light{background:#28415d}.note{color:#ffd166;font-size:13px}.big{font-size:24px;font-weight:900}.sectionTitle{display:flex;justify-content:space-between;align-items:center;gap:10px}button:disabled{opacity:.3;cursor:not-allowed}.trackbar{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 4px}.trackside .wrap{max-width:none;padding:10px}.trackside .top,.trackside .tabs,.trackside .footer{display:none}.trackside #overall{display:block!important}.trackside #overallTable table{min-width:0;font-size:clamp(18px,2.2vw,34px)}.trackside #overallTable th,.trackside #overallTable td{padding:14px 10px}.trackside #overallTable .pts{font-size:1.25em}@media (max-width:900px){.wrap{padding:12px}.top{align-items:flex-start}.tabs,.trackbar,.actions{gap:6px}button{min-height:44px;padding:10px 12px}.card{padding:10px;border-radius:12px}table{min-width:700px}.grid{grid-template-columns:repeat(auto-fit,minmax(145px,1fr))}.sectionTitle{align-items:flex-start;flex-direction:column}.big{font-size:22px}}
 @media (max-width:600px){.wrap{padding:8px}.top{display:block}.badge{font-size:12px}h1{font-size:26px}.sub{font-size:13px}.tabs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));position:sticky;top:0;z-index:20;background:#08131f;padding:6px 0}.tabs button{width:100%;padding:10px 6px;font-size:13px}.trackbar,.actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.trackbar button,.actions button{width:100%}.card{margin:8px 0;overflow-x:auto;-webkit-overflow-scrolling:touch}.grid{grid-template-columns:1fr}table{min-width:680px;font-size:13px}th,td{padding:7px 5px}.mini{min-width:40px;min-height:40px;padding:5px}.pts{font-size:16px}.note{font-size:12px}.trackside #overallTable table{font-size:16px}.trackside #overallTable th,.trackside #overallTable td{padding:10px 6px}}
 @media (min-width:1200px){.wrap{max-width:1440px}.card{padding:18px}table{font-size:15px}}
-@media print{body{background:white;color:black}.top,.tabs,.trackbar,.actions,.footer,.panel{display:none!important}#overall{display:block!important}.card{border:0;background:white;color:black;padding:0}table{min-width:0;color:black}th{position:static;background:white;color:black}th,td{border-bottom:1px solid #aaa}}</style>
-<link rel="manifest" href="./manifest.webmanifest">
+@media print{body{background:white;color:black}.top,.tabs,.trackbar,.actions,.footer,.panel{display:none!important}#overall{display:block!important}.card{border:0;background:white;color:black;padding:0}table{min-width:0;color:black}th{position:static;background:white;color:black}th,td{border-bottom:1px solid #aaa}}</style><link rel="manifest" href="./manifest.webmanifest">
 <meta name="theme-color" content="#111827">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="INA Omnium">
+<meta name="apple-mobile-web-app-title" content="WTRACK">
 <link rel="apple-touch-icon" href="./icons/icon-192.png">
-
 </head><body><div class='wrap'>
-<div class='top'><div><div class='badge'>INDONESIA TRACK ENDURANCE</div><h1>INA OMNIUM CALCULATOR</h1><div class='sub'>Trackside live scoring • Offline • Auto-save</div></div><div class='big'>🇮🇩</div></div>
+<div class='top'><div><div class='badge'>INDONESIA TRACK ENDURANCE</div><h1>WTRACK RACE CALCULATOR</h1><div class='sub'>Trackside live scoring • Offline • Auto-save</div></div><div class='big'>🇮🇩</div></div>
 <div class='trackbar'><button class='good' onclick='toggleTrackside()'>⛶ TRACKSIDE FULL SCREEN</button><button class='light' onclick='exportCSV()'>⇩ EXPORT EXCEL</button><button class='light' onclick='exportPDF()'>⇩ EXPORT PDF</button></div>
 <div class='tabs'><button class='tab active' data-tab='setup'>RIDERS</button><button class='tab' data-tab='scratch'>SCRATCH</button><button class='tab' data-tab='tempo'>TEMPO</button><button class='tab' data-tab='elim'>ELIMINATION</button><button class='tab' data-tab='points'>POINTS RACE</button><button class='tab' data-tab='overall'>OVERALL</button></div>
 <section id='setup' class='panel'><div class='card'><div class='sectionTitle'><h2>Daftar Rider</h2><button class='primary' onclick='addRider()'>+ Rider</button></div><div id='riderInputs'></div><div class='actions'><button class='good' onclick='saveSetup()'>Simpan Rider</button><button class='danger' onclick='resetAll()'>Reset Semua</button></div></div></section>
@@ -20,7 +17,7 @@
 <section id='elim' class='panel hidden'><div class='card'><h2>Elimination — Checklist Live</h2><div class='note'>Centang rider saat tereliminasi. Centang pertama = peringkat terakhir, berikutnya naik satu posisi, sampai rider terakhir = peringkat 1. Jika salah, batalkan centang dan urutan dihitung ulang.</div><div id='elimTable'></div></div></section>
 <section id='points' class='panel hidden'><div class='card'><h2>Points Race — Live Final Omnium</h2><div class='note'>Poin Points Race ditambahkan langsung ke total tiga event sebelumnya. Tombol Final menggunakan 10–6–4–2.</div><div id='pointsTable'></div></div></section>
 <section id='overall' class='panel hidden'><div class='card'><div class='sectionTitle'><h2>LIVE OVERALL</h2><button onclick='window.print()'>Print / PDF</button></div><div id='overallTable'></div></div></section>
-<div class='footer'>INA Omnium Calculator v1 • Data tersimpan lokal di browser. Verifikasi hasil resmi dengan commissaires/UCI regulations.</div></div>
+<div class='footer'>WTRACK RACE CALCULATOR v1 • Data tersimpan lokal di browser. Verifikasi hasil resmi dengan commissaires/UCI regulations.</div></div>
 <script>
 const KEY='inaOmniumV1';let S=JSON.parse(localStorage.getItem(KEY)||'null')||{riders:[],hist:[]};
 if(S.tempoLap===undefined)S.tempoLap=40;if(!S.tempoLog)S.tempoLog=[];if(!S.tempoChecks)S.tempoChecks={};if(!S.elimOrder)S.elimOrder=[];
@@ -55,11 +52,6 @@ function exportPDF(){let was=document.body.classList.contains('trackside');docum
 function renderAll(){renderSetup();document.getElementById('scratchTable').innerHTML=simpleRankTable('Scratch','scratchPos');renderTempo();renderElimination();renderPoints();renderOverall()}
 document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>{document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));b.classList.add('active');document.querySelectorAll('.panel').forEach(x=>x.classList.add('hidden'));document.getElementById(b.dataset.tab).classList.remove('hidden')});
 if(!S.riders.length)for(let i=0;i<8;i++)S.riders.push(baseRider());renderAll();
-</script>
-<script>
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => navigator.serviceWorker.register('./service-worker.js'));
-}
-</script>
-
-</body></html>
+</script><script>
+if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('./service-worker.js'))}
+</script></body></html>

@@ -1,7 +1,7 @@
 {
-  "name": "INA Omnium Calculator",
-  "short_name": "INA Omnium",
-  "description": "Track cycling Omnium calculator for trackside use.",
+  "name": "WTRACK RACE CALCULATOR",
+  "short_name": "WTRACK",
+  "description": "Track cycling race calculator",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
