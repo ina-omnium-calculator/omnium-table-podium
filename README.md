@@ -1,11 +1,14 @@
-WTRACK RACE CALCULATOR V3 — EVENT & START LIST
+WTRACK RACE CALCULATOR V4 — SIMPLE PDF START LIST IMPORT
 
-New:
-- Race Information: Event, Race, Venue, Date
-- Event data saved locally with race
-- Export filename automatically uses Event + Race
-- Event info appears in CSV and print/PDF
-- Start List import with preview + confirmation
-- CSV/TXT auto import: Bib, Rider/Name, Country/NOC
-- PDF/XLS/XLSX detected; current static/offline version asks to convert to CSV to prevent incorrect parsing
-- Existing Omnium scoring preserved
+Workflow:
+1. Isi nama kejuaraan (jika perlu)
+2. Upload PDF Start List resmi
+3. Klik Baca Start List
+4. Preview Bib / Rider / Country
+5. Klik Import Riders
+
+Parser PDF disesuaikan dengan format start list resmi yang berisi:
+Race Number + Rider Name + NOC Code.
+Header, venue, race information, 'At the fence', dan 'At the blue band' tidak dimasukkan sebagai rider.
+
+Existing Omnium scoring remains unchanged.
